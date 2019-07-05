@@ -21,7 +21,7 @@ class App extends React.Component{
             <BrowserRouter>
                 <div>
                 <ul>
-                    {!_.isEmpty(this.props.user) ?
+                    {!_.isEmpty(localStorage.getItem('userAuthToken')) ?
                         (<div>
                             <li><Link to='/users/account' >Account</Link></li>
                             <li><Link to='/users/logout'>Logout</Link></li>
@@ -33,6 +33,7 @@ class App extends React.Component{
                             <li><Link to='/users/login'>Login</Link></li>
                         </div>)}
                  </ul>
+                        
                        
                      <Switch>
                               <Route path="/users/account" component={Account} exact={true} />
