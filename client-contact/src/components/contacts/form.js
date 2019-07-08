@@ -42,22 +42,28 @@ class NotesForm extends React.Component{
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                     <label>
-                         name
-                         <input type="text" value={this.state.name} name="name" onChange={this.handleChange} />
-                     </label><br/>
-
-                     <label>
-                         phone_number
-                         <input type="text" value={this.state.phoneNo} name="phoneNo" onChange={this.handleChange}/>
-                     </label><br/>
-
-                     <label>
-                         email
-                         <input type="email" value={this.state.email} name="email" onChange={this.handleChange} />
-                     </label><br/>
-
-                     <input type="submit" />
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="exampleInputUser1">
+                                name
+                                <input type="text" name="name" value={this.state.name} onChange={this.handleChange} class="form-control" id="exampleInputUser1" aria-describedby="emailHelp" placeholder="Enter Username"/>
+                            </label><br/>
+                        </div>  
+                        <div class="form-group">                          
+                            <label  for="exampleInputPhone1">                                
+                                phone_number
+                                <input type="text" name="phoneNo" value={this.state.phoneNo} onChange={this.handleChange} class="form-control" id="exampleInputPhone1" placeholder="PhoneNo" />
+                            </label><br/>
+                        </div>  
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1">
+                                email
+                                <input type="text" name="email" value={this.state.email}  onChange={this.handleChange} class="form-control" id="exampleInputEmail1" placeholder="Email"/>
+                            </label><br/>
+                        </div>    
+                        <input type="submit" value="submit" />
+                       
+                    </fieldset>
                 </form>
             </div>
         )
@@ -65,3 +71,10 @@ class NotesForm extends React.Component{
 }
 
 export default NotesForm
+
+                        // <div>
+                        //      <label for="exampleInputPhone1">
+                        //         phone_number
+                        //         <input type="text" value={this.state.phoneNo} name="phoneNo" onChange={this.handleChange} class="form-control" id="exampleInputPhone1" placeholder="Enter phoneNo"/>
+                        //     </label><br/>
+                        // </div><br/>    

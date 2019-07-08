@@ -42,22 +42,30 @@ class Register extends React.Component{
     render(){
         return(
             <div>
-                <h2>REGISTER</h2>
+                <h4><b>REGISTER</b></h4><br/>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
-                        username
-                        <input type="text" name="username" value={this.state.username} onChange={this.handleChange} />
-                    </label><br/>
-                    <label><br/>
-                        email
-                        <input type="text" name="email" value={this.state.email}  onChange={this.handleChange} />
-                    </label><br/>
-                    <label>
-                        password
-                        <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-                    </label>
-
-                    <input type="submit" value="submit" />
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="exampleInputUser1">
+                                username
+                                <input type="text" name="username" value={this.state.username} onChange={this.handleChange} class="form-control" id="exampleInputUser1" aria-describedby="emailHelp" placeholder="Enter Username"/>
+                            </label><br/>
+                        </div>  
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1">
+                                email
+                                <input type="text" name="email" value={this.state.email}  onChange={this.handleChange} class="form-control" id="exampleInputEmail1" placeholder="Email"/>
+                            </label><br/>
+                        </div>   
+                        <div class="form-group">                          
+                            <label  for="exampleInputPassword1">                                
+                                password
+                                <input type="password" name="password" value={this.state.password} onChange={this.handleChange} class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                            </label><br/>
+                        </div>   
+                            <input type="submit" value="submit" />
+                       
+                    </fieldset>
                 </form>
             </div>
         )

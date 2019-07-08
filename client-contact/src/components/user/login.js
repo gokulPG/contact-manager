@@ -40,16 +40,20 @@ class Login extends React.Component{
     render(){
         return(
             <div>
-                <h2>LOGIN</h2>
+                <h2><b>LOGIN</b></h2><br/>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
-                        email
-                        <input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        password
-                        <input type="text" name="password" value={this.state.password} onChange={this.handleChange} />
-                    </label>
+                        <div class="form-group">  
+                            <label for="exampleInputEmail1">
+                                email
+                                <input type="text" name="email" value={this.state.email}  onChange={this.handleChange} class="form-control" id="exampleInputEmail1" placeholder="Email"/>
+                            </label><br/>
+                        </div><br/>   
+                        <div class="form-group">                          
+                            <label  for="exampleInputPassword1">                                
+                                password
+                                <input type="password" name="password" value={this.state.password} onChange={this.handleChange} class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                            </label><br/>
+                        </div><br/>   
 
                     <input type="submit" value="submit" />
                 </form>

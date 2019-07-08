@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import NotesForm from './form'
+import {Link} from 'react-router-dom'
 
 
 class ContactNew extends React.Component{
@@ -29,6 +30,7 @@ class ContactNew extends React.Component{
              <div>
                  <h2>New Contact</h2>
                  <NotesForm handleSubmit={this.handleSubmit}/>
+                 <Link to="/contacts">back</Link> <br/>
                 
              </div>
          )
